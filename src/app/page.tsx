@@ -23,7 +23,7 @@ export default async function HomePage() {
         <div className="flex flex-wrap gap-4">
           <Link
             href="/blog"
-            className="rounded-lg bg-brand-600 px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-brand-500"
+            className="rounded-lg bg-brand-500 px-5 py-2.5 text-sm font-medium text-neutral-950 transition-colors hover:bg-brand-400"
           >
             Read the writing
           </Link>
@@ -37,8 +37,8 @@ export default async function HomePage() {
       </section>
 
       {/* Email subscribe — primary CTA */}
-      <section className="mb-24 rounded-2xl border border-neutral-800 bg-neutral-900/50 px-8 py-10">
-        <h2 className="mb-2 text-lg font-semibold text-neutral-100">
+      <section className="mb-24 rounded-xl border border-neutral-700 bg-neutral-900 px-8 py-10">
+        <h2 className="mb-2 text-lg font-semibold text-neutral-50">
           Get the writing in your inbox
         </h2>
         <p className="mb-6 text-sm text-neutral-400">
@@ -97,10 +97,10 @@ export default async function HomePage() {
               <Link
                 key={post.slug}
                 href={`/blog/${post.slug}`}
-                className="group flex items-start justify-between gap-4 rounded-xl border border-neutral-800 bg-neutral-900/30 p-5 transition-colors hover:border-neutral-700 hover:bg-neutral-900/60"
+                className="group flex items-start justify-between gap-4 rounded-xl border border-neutral-800 bg-neutral-900 p-5 transition-colors hover:border-brand-600 hover:bg-neutral-900"
               >
                 <div>
-                  <h3 className="font-medium text-neutral-100 transition-colors group-hover:text-white">
+                  <h3 className="font-medium text-neutral-100 transition-colors group-hover:text-brand-400">
                     {post.title}
                   </h3>
                   {post.description && (

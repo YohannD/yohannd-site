@@ -5,14 +5,16 @@ import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 
 const inter = Inter({
-  variable: "--font-inter",
+  variable: "--font-sans",
   subsets: ["latin"],
+  weight: ["400", "600"],
   display: "swap",
 });
 
 const jetbrainsMono = JetBrains_Mono({
-  variable: "--font-jetbrains-mono",
+  variable: "--font-mono",
   subsets: ["latin"],
+  weight: ["400"],
   display: "swap",
 });
 
@@ -22,7 +24,7 @@ export const metadata: Metadata = {
     template: "%s | Yohann Doillon",
   },
   description:
-    "CCO at 10x Partners. Official Palantir Partner. Building high-impact data products and teams.",
+    "Builder. Operator. Writing on applied AI, building high-leverage teams, and what it means to work at the frontier of technology.",
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -30,13 +32,13 @@ export const metadata: Metadata = {
     siteName: "Yohann Doillon",
     title: "Yohann Doillon",
     description:
-      "CCO at 10x Partners. Official Palantir Partner. Building high-impact data products and teams.",
+      "Builder. Operator. Writing on applied AI, building high-leverage teams, and what it means to work at the frontier of technology.",
   },
   twitter: {
     card: "summary_large_image",
     title: "Yohann Doillon",
     description:
-      "CCO at 10x Partners. Official Palantir Partner. Building high-impact data products and teams.",
+      "Builder. Operator. Writing on applied AI, building high-leverage teams, and what it means to work at the frontier of technology.",
   },
   robots: {
     index: true,
@@ -50,7 +52,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable}`}>
+    <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable} antialiased`}>
       <body className="min-h-screen flex flex-col">
         <Nav />
         <main className="flex-1">{children}</main>

@@ -102,8 +102,8 @@ export default function AboutPage() {
         </div>
       </div>
 
-      <div className="rounded-2xl border border-neutral-800 bg-neutral-900/50 px-8 py-10 mb-12">
-        <h2 className="mb-2 text-lg font-semibold text-neutral-100">
+      <div className="rounded-xl border border-neutral-700 bg-neutral-900 px-8 py-10 mb-12">
+        <h2 className="mb-2 text-lg font-semibold text-neutral-50">
           Follow the writing
         </h2>
         <p className="mb-6 text-sm text-neutral-400">

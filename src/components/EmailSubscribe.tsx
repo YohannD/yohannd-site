@@ -39,7 +39,7 @@ export default function EmailSubscribe({ className = "" }: { className?: string 
           />
           <button
             type="submit"
-            className="rounded-lg bg-brand-600 px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-brand-500 shrink-0"
+            className="rounded-lg bg-brand-500 px-5 py-2.5 text-sm font-medium text-neutral-950 transition-colors hover:bg-brand-400 shrink-0"
           >
             Subscribe
           </button>

@@ -1,35 +1,55 @@
 ---
-title: Why Palantir Wins in Enterprise Data
+title: What Palantir Got Right (That Everyone Else Missed)
 date: "2026-03-15"
-description: Most enterprise data tools solve the wrong problem. Here's why Palantir's approach is different — and why it matters.
-tags: [Palantir, Enterprise, Data]
+description: Palantir built for the hardest customers in the hardest domains. That forced a kind of rigor that's now undervalued in the AI rush.
+tags: [AI, Enterprise, Data]
 published: true
 ---
 
-After years working with enterprise data teams across industries, I keep coming back to the same question: why do most data projects fail to generate operational value?
+There's a pattern I've watched repeat itself across enterprise AI. A new tool arrives with a compelling demo. The procurement cycle runs. The implementation starts. And somewhere between kickoff and go-live, the gap appears — the gap between what the tool promised and what the organization was actually ready to do with it.
 
-The tooling isn't the bottleneck. Most enterprises have invested heavily in warehouses, orchestration, and visualization. The problem is that data and decision-making are decoupled. Analysts produce outputs; operators ignore them.
+Most vendors blame the customer. The customer wasn't ready. Their data wasn't clean. Their people didn't adopt it.
 
-## The integration problem
+Palantir blamed itself. And that distinction changed everything about how they built.
 
-Palantir's core insight — and what makes Foundry different — is that **the product is the workflow, not the dashboard**.
+## The hard customer problem
 
-Instead of building yet another analytics layer, Foundry embeds data into the operational systems where decisions actually get made. Your maintenance schedule isn't just visible in a report — it's directly integrated with the system your field team uses to plan their day.
+Palantir's first major customers weren't tech companies or digitally native enterprises with clean data lakes and agile ops teams. They were intelligence agencies, defense contractors, and manufacturing conglomerates with decades of accumulated technical debt, siloed systems, and an organizational culture built on information scarcity.
 
-This sounds simple. It isn't. Most data teams aren't set up to build operational workflows. They're set up to answer questions. That capability gap is where 10x does its best work.
+To succeed with those customers, Palantir had to solve the problem that everyone else had declared unsolvable: making data useful in environments that actively resist change.
 
-## What this means for leaders
+The result was a product philosophy built around a simple but radical idea — **the software has to meet the organization where it is, not where it wishes it were**.
 
-If you're a data leader evaluating Palantir, the question isn't "what can this tool do?" It's "what workflows can we actually change?"
+## What that actually means
 
-That requires thinking differently about your team structure, your relationship with operations, and your definition of "done." A dashboard shipped is not a problem solved.
+Most data tools are built on an implicit assumption: that the user will reorganize their work to fit the tool. The analyst queries the warehouse. The manager reads the dashboard. The operator checks the report.
 
-## The AIP inflection point
+Palantir rejected this. Foundry's architecture was built to embed data and AI directly into the workflows where decisions actually happen. Not a separate analytics surface you have to navigate to — but a layer integrated into the operational system itself.
 
-With Artificial Intelligence Platform (AIP), Palantir has gone further — creating a controlled environment where LLMs can act on operational data directly. The implications for enterprise AI adoption are significant: instead of building bespoke AI pipelines, teams can connect AI reasoning to existing Foundry workflows with governance built in from day one.
+This sounds obvious in retrospect. It wasn't. Building workflow integration for every enterprise context is expensive, messy, and specific in ways that don't scale cleanly. It's far easier to build a beautiful dashboard and tell customers their problem is organizational.
 
-We're still early. But the trajectory is clear.
+The willingness to take on that complexity — to absorb the integration cost rather than pass it to the customer — is what made Palantir work in places where everything else failed.
+
+## The AI inflection
+
+This philosophy matters more now than it ever did, because AI raises the integration stakes.
+
+When a data tool gives you a wrong dashboard, you notice and investigate. When an AI system makes a wrong decision inside an operational workflow, the error propagates before anyone catches it. The feedback loops are longer, the failure modes are harder to spot, and the organizational change required to use AI safely is more significant than anything required for analytics.
+
+What Palantir understood early — and what most of the current AI tooling industry is only beginning to grapple with — is that governance and workflow integration aren't features you add after product-market fit. They're the core architecture decisions that determine whether your technology is safe to deploy in real conditions.
+
+## What I take from this
+
+I'm not writing this as an argument for any particular platform. The lesson isn't "use Palantir."
+
+The lesson is that the hardest part of deploying AI is almost never the model. It's the decision about where the AI operates, what data it can touch, who reviews its outputs, and what happens when it's wrong.
+
+The organizations that are going to build durable AI capabilities are the ones that take those questions seriously from day one — not as compliance checkboxes, but as the actual design problem.
+
+That rigor is what good AI deployment looks like. It's what Palantir was forced to develop by working with customers who couldn't afford to get it wrong.
+
+The rest of the industry is catching up.
 
 ---
 
-*If you're thinking through a Palantir evaluation or Foundry implementation, I'm happy to talk through what we've seen work. [Get in touch →](/contact)*
+*Have thoughts on this? I'm always interested in real deployment experiences — the ones that worked and the ones that didn't. [Get in touch →](/contact)*

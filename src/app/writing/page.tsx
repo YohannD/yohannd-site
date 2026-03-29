@@ -1,33 +1,22 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { getAllPosts } from "@/lib/posts";
 
-export default function HomePage() {
+export const metadata: Metadata = {
+  title: "Writing",
+  description: "Yohann Doillon writing about building AI-first companies and living abroad.",
+};
+
+export default function WritingPage() {
   const posts = getAllPosts();
 
   return (
     <div className="mx-auto max-w-[620px] px-5 py-16">
-      {/* Hero — locked */}
-      <section className="mb-16">
-        <h1 className="text-[28px] font-[500] leading-snug text-neutral-50">
-          Yohann Doillon
-        </h1>
-        <p className="mt-5 text-base text-neutral-500 leading-relaxed">
-          Founder at{" "}
-          <a
-            href="https://10x.partners"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline underline-offset-[3px] text-neutral-500 hover:text-neutral-300 transition-colors"
-          >
-            10x Partners
-          </a>
-          . Writing about building AI-first companies and living abroad. Zürich,
-          via Burgundy and a few places in between.
-        </p>
-      </section>
+      <h1 className="mb-12 text-[28px] font-[500] text-neutral-50">Writing</h1>
 
-      {/* Blog list */}
-      {posts.length > 0 && (
+      {posts.length === 0 ? (
+        <p className="text-sm text-neutral-500">No posts yet. Check back soon.</p>
+      ) : (
         <section>
           {posts.map((post, i) => (
             <Link

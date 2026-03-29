@@ -4,10 +4,9 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const links = [
-  { href: "/", label: "Home" },
+  { href: "/writing", label: "Writing" },
   { href: "/about", label: "About" },
-  { href: "/blog", label: "Blog" },
-  { href: "/contact", label: "Contact" },
+  { href: "/now", label: "Now" },
 ];
 
 export default function Nav() {
@@ -20,7 +19,7 @@ export default function Nav() {
           href="/"
           className="text-sm font-medium text-neutral-100 transition-colors hover:text-neutral-50"
         >
-          Yohann Doillon
+          YD
         </Link>
         <nav className="flex items-center gap-6">
           {links.map((link) => (
@@ -28,7 +27,7 @@ export default function Nav() {
               key={link.href}
               href={link.href}
               className={`text-sm transition-colors ${
-                pathname === link.href
+                pathname === link.href || pathname.startsWith(link.href + "/")
                   ? "text-neutral-100"
                   : "text-neutral-500 hover:text-neutral-300"
               }`}

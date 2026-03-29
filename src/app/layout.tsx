@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     template: "%s | Yohann Doillon",
   },
   description:
-    "Builder. Operator. Writing on applied AI, building high-leverage teams, and what it means to work at the frontier of technology.",
+    "Founder at 10x Partners. Writing about building AI-first companies and living abroad.",
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -32,13 +32,13 @@ export const metadata: Metadata = {
     siteName: "Yohann Doillon",
     title: "Yohann Doillon",
     description:
-      "Builder. Operator. Writing on applied AI, building high-leverage teams, and what it means to work at the frontier of technology.",
+      "Founder at 10x Partners. Writing about building AI-first companies and living abroad.",
   },
   twitter: {
     card: "summary_large_image",
     title: "Yohann Doillon",
     description:
-      "Builder. Operator. Writing on applied AI, building high-leverage teams, and what it means to work at the frontier of technology.",
+      "Founder at 10x Partners. Writing about building AI-first companies and living abroad.",
   },
   robots: {
     index: true,

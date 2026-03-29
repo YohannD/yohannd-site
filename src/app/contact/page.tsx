@@ -7,84 +7,53 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <div className="mx-auto max-w-4xl px-6 py-20">
+    <div className="mx-auto max-w-[620px] px-5 py-16">
       <div className="mb-12">
-        <p className="mb-3 font-mono text-sm text-brand-400">contact</p>
-        <h1 className="mb-4 text-4xl font-semibold text-neutral-50">
+        <h1 className="mb-3 text-2xl font-semibold text-neutral-50">
           Get in touch
         </h1>
-        <p className="max-w-lg text-lg text-neutral-400 leading-relaxed">
+        <p className="text-base text-neutral-400 leading-relaxed">
           Interested in working together, speaking at your event, or just want
           to talk data and AI? I&apos;d love to hear from you.
         </p>
       </div>
 
-      <div className="grid gap-8 sm:grid-cols-2">
-        {/* Direct contact */}
-        <div className="rounded-xl border border-neutral-800 bg-neutral-900/50 p-6">
-          <h2 className="mb-4 font-medium text-neutral-100">Email</h2>
-          <p className="mb-4 text-sm text-neutral-400">
-            Best for business inquiries, partnership opportunities, or speaking
-            requests.
-          </p>
-          <a
-            href="mailto:yohann@10x.partners"
-            className="text-brand-400 transition-colors hover:text-brand-300"
-          >
-            yohann@10x.partners
-          </a>
-        </div>
-
-        {/* LinkedIn */}
-        <div className="rounded-xl border border-neutral-800 bg-neutral-900/50 p-6">
-          <h2 className="mb-4 font-medium text-neutral-100">LinkedIn</h2>
-          <p className="mb-4 text-sm text-neutral-400">
-            Connect professionally. I respond to thoughtful connection requests
-            and messages.
-          </p>
-          <a
-            href="https://linkedin.com/in/yohanndoillon"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-brand-400 transition-colors hover:text-brand-300"
-          >
-            linkedin.com/in/yohanndoillon →
-          </a>
-        </div>
-
-        {/* 10x Partners */}
-        <div className="rounded-xl border border-neutral-800 bg-neutral-900/50 p-6">
-          <h2 className="mb-4 font-medium text-neutral-100">10x Partners</h2>
-          <p className="mb-4 text-sm text-neutral-400">
-            For enterprise data platform and Palantir advisory engagements,
-            reach out through 10x.
-          </p>
-          <a
-            href="https://10x.partners/contact"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-brand-400 transition-colors hover:text-brand-300"
-          >
-            10x.partners/contact →
-          </a>
-        </div>
-
-        {/* X */}
-        <div className="rounded-xl border border-neutral-800 bg-neutral-900/50 p-6">
-          <h2 className="mb-4 font-medium text-neutral-100">X / Twitter</h2>
-          <p className="mb-4 text-sm text-neutral-400">
-            Follow for thoughts on AI, data platforms, and enterprise software.
-            DMs open.
-          </p>
-          <a
-            href="https://x.com/yohannd"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-brand-400 transition-colors hover:text-brand-300"
-          >
-            @yohannd →
-          </a>
-        </div>
+      <div className="divide-y divide-neutral-800">
+        {[
+          {
+            label: "Email",
+            desc: "Best for business inquiries, partnership opportunities, or speaking requests.",
+            link: { href: "mailto:yohann@10x.partners", text: "yohann@10x.partners" },
+          },
+          {
+            label: "LinkedIn",
+            desc: "Connect professionally. I respond to thoughtful connection requests and messages.",
+            link: { href: "https://linkedin.com/in/yohanndoillon", text: "linkedin.com/in/yohanndoillon →" },
+          },
+          {
+            label: "10x Partners",
+            desc: "For enterprise data platform and Palantir advisory engagements, reach out through 10x.",
+            link: { href: "https://10x.partners/contact", text: "10x.partners/contact →" },
+          },
+          {
+            label: "X / Twitter",
+            desc: "Follow for thoughts on AI, data platforms, and enterprise software. DMs open.",
+            link: { href: "https://x.com/yohannd", text: "@yohannd →" },
+          },
+        ].map((item) => (
+          <div key={item.label} className="py-6">
+            <h2 className="mb-1.5 text-sm font-medium text-neutral-200">{item.label}</h2>
+            <p className="mb-3 text-sm text-neutral-500 leading-relaxed">{item.desc}</p>
+            <a
+              href={item.link.href}
+              target={item.link.href.startsWith("mailto") ? undefined : "_blank"}
+              rel={item.link.href.startsWith("mailto") ? undefined : "noopener noreferrer"}
+              className="text-sm text-neutral-300 underline underline-offset-3 decoration-neutral-700 transition-colors hover:text-neutral-100"
+            >
+              {item.link.text}
+            </a>
+          </div>
+        ))}
       </div>
     </div>
   );

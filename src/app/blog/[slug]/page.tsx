@@ -28,37 +28,34 @@ export default async function BlogPostPage({ params }: Props) {
   if (!post || post.published === false) notFound();
 
   return (
-    <div className="mx-auto max-w-4xl px-6 py-20">
+    <div className="mx-auto max-w-[620px] px-5 py-16">
       {/* Back */}
       <Link
         href="/blog"
-        className="mb-10 inline-flex items-center gap-1.5 text-sm text-neutral-500 transition-colors hover:text-neutral-300"
+        className="mb-10 inline-block text-sm text-neutral-500 transition-colors hover:text-neutral-300"
       >
         ← All posts
       </Link>
 
       {/* Header */}
-      <header className="mb-12">
-        <time className="mb-4 block font-mono text-sm text-brand-400">
+      <header className="mb-10">
+        <time className="mb-3 block text-sm text-neutral-500">
           {new Date(post.date).toLocaleDateString("en-US", {
             month: "long",
             day: "numeric",
             year: "numeric",
           })}
         </time>
-        <h1 className="mb-4 text-4xl font-semibold leading-tight text-neutral-50">
+        <h1 className="mb-4 text-3xl font-semibold leading-tight text-neutral-50">
           {post.title}
         </h1>
         {post.description && (
-          <p className="text-lg text-neutral-400">{post.description}</p>
+          <p className="text-base text-neutral-400 leading-relaxed">{post.description}</p>
         )}
         {post.tags && post.tags.length > 0 && (
-          <div className="mt-4 flex flex-wrap gap-1.5">
+          <div className="mt-4 flex flex-wrap gap-3">
             {post.tags.map((tag) => (
-              <span
-                key={tag}
-                className="rounded-md bg-neutral-800 px-2.5 py-1 text-xs text-neutral-400"
-              >
+              <span key={tag} className="text-xs text-neutral-600">
                 {tag}
               </span>
             ))}

@@ -14,11 +14,11 @@ export default function Nav() {
   const pathname = usePathname();
 
   return (
-    <header className="sticky top-0 z-50 border-b border-neutral-800 bg-neutral-950/90 backdrop-blur-sm">
-      <div className="mx-auto flex max-w-4xl items-center justify-between px-6 py-4">
+    <header className="border-b border-neutral-800">
+      <div className="mx-auto flex max-w-[620px] items-center justify-between px-5 py-4">
         <Link
           href="/"
-          className="font-semibold tracking-tight text-neutral-50 transition-colors hover:text-brand-400"
+          className="text-sm font-medium text-neutral-100 transition-colors hover:text-neutral-50"
         >
           Yohann Doillon
         </Link>
@@ -29,8 +29,8 @@ export default function Nav() {
               href={link.href}
               className={`text-sm transition-colors ${
                 pathname === link.href
-                  ? "text-brand-400"
-                  : "text-neutral-400 hover:text-neutral-100"
+                  ? "text-neutral-100"
+                  : "text-neutral-500 hover:text-neutral-300"
               }`}
             >
               {link.label}

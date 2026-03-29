@@ -7,10 +7,10 @@ const socials = [
 
 export default function Footer() {
   return (
-    <footer className="border-t border-neutral-800 py-10">
-      <div className="mx-auto flex max-w-4xl flex-col items-center justify-between gap-4 px-6 sm:flex-row">
+    <footer className="border-t border-neutral-800 py-10 mt-20">
+      <div className="mx-auto flex max-w-[620px] flex-col items-start justify-between gap-4 px-5 sm:flex-row sm:items-center">
         <p className="text-sm text-neutral-500">
-          © {new Date().getFullYear()} Yohann Doillon. All rights reserved.
+          © {new Date().getFullYear()} Yohann Doillon
         </p>
         <div className="flex items-center gap-5">
           {socials.map((s) => (

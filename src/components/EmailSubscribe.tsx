@@ -12,8 +12,6 @@ export default function EmailSubscribe({ className = "" }: { className?: string 
       setStatus("error");
       return;
     }
-    // Wire up to your email service (Buttondown, ConvertKit, etc.) here.
-    // For now, opens a mailto so no server is needed at launch.
     window.location.href = `mailto:yohann@yohannd.com?subject=Subscribe&body=Please subscribe ${email} to Yohann's writing.`;
     setStatus("submitted");
     setEmail("");
@@ -22,7 +20,7 @@ export default function EmailSubscribe({ className = "" }: { className?: string 
   return (
     <div className={className}>
       {status === "submitted" ? (
-        <p className="text-sm text-brand-400">
+        <p className="text-sm text-neutral-400">
           Thanks — check your email to confirm.
         </p>
       ) : (
@@ -35,18 +33,18 @@ export default function EmailSubscribe({ className = "" }: { className?: string 
               setStatus("idle");
             }}
             placeholder="your@email.com"
-            className="flex-1 rounded-lg border border-neutral-700 bg-neutral-900 px-4 py-2.5 text-sm text-neutral-100 placeholder-neutral-600 outline-none transition-colors focus:border-brand-500 focus:ring-1 focus:ring-brand-500"
+            className="flex-1 border border-neutral-700 bg-transparent px-4 py-2.5 text-sm text-neutral-100 placeholder-neutral-600 outline-none transition-colors focus:border-neutral-400"
           />
           <button
             type="submit"
-            className="rounded-lg bg-brand-500 px-5 py-2.5 text-sm font-medium text-neutral-950 transition-colors hover:bg-brand-400 shrink-0"
+            className="border border-neutral-200 bg-neutral-100 px-5 py-2.5 text-sm font-medium text-neutral-950 transition-colors hover:bg-neutral-50 shrink-0"
           >
             Subscribe
           </button>
         </form>
       )}
       {status === "error" && (
-        <p className="mt-2 text-xs text-red-400">Enter a valid email address.</p>
+        <p className="mt-2 text-xs text-neutral-500">Enter a valid email address.</p>
       )}
     </div>
   );

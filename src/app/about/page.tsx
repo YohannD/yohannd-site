@@ -10,18 +10,17 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <div className="mx-auto max-w-4xl px-6 py-20">
+    <div className="mx-auto max-w-[620px] px-5 py-16">
       <div className="mb-12">
-        <p className="mb-3 font-mono text-sm text-brand-400">about</p>
-        <h1 className="mb-6 text-4xl font-semibold text-neutral-50">
+        <h1 className="mb-3 text-2xl font-semibold text-neutral-50">
           Yohann Doillon
         </h1>
-        <p className="text-lg text-neutral-400">
+        <p className="text-base text-neutral-400">
           Technologist · Operator · Writing on AI, building, and what comes next
         </p>
       </div>
 
-      <div className="space-y-8 text-neutral-300 leading-relaxed mb-16">
+      <div className="space-y-6 text-base text-neutral-300 leading-relaxed mb-14">
         <p>
           I grew up with computers before I understood what they were. That
           curiosity — about how systems work, how people use them, and what
@@ -49,7 +48,7 @@ export default function AboutPage() {
             href="https://10x.partners"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-brand-400 transition-colors hover:text-brand-300"
+            className="text-neutral-100 underline underline-offset-3 decoration-neutral-600 transition-colors hover:text-neutral-50"
           >
             10x Partners
           </a>
@@ -65,48 +64,50 @@ export default function AboutPage() {
         </p>
       </div>
 
-      <div className="grid gap-6 sm:grid-cols-2 mb-16">
-        <div className="rounded-xl border border-neutral-800 bg-neutral-900/50 p-5">
-          <h3 className="mb-4 text-xs font-medium uppercase tracking-widest text-neutral-500">
-            Currently
-          </h3>
-          <ul className="space-y-2 text-sm text-neutral-300">
-            <li>CCO @ 10x Partners</li>
-            <li>Applied AI strategy</li>
-            <li>Writing on AI &amp; building</li>
-          </ul>
-        </div>
+      <div className="mb-14 border-t border-neutral-800 pt-10">
+        <div className="grid gap-8 sm:grid-cols-2">
+          <div>
+            <h3 className="mb-3 text-xs font-medium uppercase tracking-widest text-neutral-500">
+              Currently
+            </h3>
+            <ul className="space-y-1.5 text-sm text-neutral-300">
+              <li>CCO @ 10x Partners</li>
+              <li>Applied AI strategy</li>
+              <li>Writing on AI &amp; building</li>
+            </ul>
+          </div>
 
-        <div className="rounded-xl border border-neutral-800 bg-neutral-900/50 p-5">
-          <h3 className="mb-4 text-xs font-medium uppercase tracking-widest text-neutral-500">
-            Links
-          </h3>
-          <ul className="space-y-2">
-            {[
-              { label: "GitHub", href: "https://github.com/yohannd" },
-              { label: "X / Twitter", href: "https://x.com/yohannd" },
-              { label: "10x Partners", href: "https://10x.partners" },
-            ].map((l) => (
-              <li key={l.href}>
-                <a
-                  href={l.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm text-brand-400 transition-colors hover:text-brand-300"
-                >
-                  {l.label} →
-                </a>
-              </li>
-            ))}
-          </ul>
+          <div>
+            <h3 className="mb-3 text-xs font-medium uppercase tracking-widest text-neutral-500">
+              Links
+            </h3>
+            <ul className="space-y-1.5">
+              {[
+                { label: "GitHub", href: "https://github.com/yohannd" },
+                { label: "X / Twitter", href: "https://x.com/yohannd" },
+                { label: "10x Partners", href: "https://10x.partners" },
+              ].map((l) => (
+                <li key={l.href}>
+                  <a
+                    href={l.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-neutral-300 underline underline-offset-3 decoration-neutral-700 transition-colors hover:text-neutral-100"
+                  >
+                    {l.label} →
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
 
-      <div className="rounded-xl border border-neutral-700 bg-neutral-900 px-8 py-10 mb-12">
-        <h2 className="mb-2 text-lg font-semibold text-neutral-50">
+      <div className="mb-12 border-t border-neutral-800 pt-10">
+        <h2 className="mb-2 text-base font-medium text-neutral-100">
           Follow the writing
         </h2>
-        <p className="mb-6 text-sm text-neutral-400">
+        <p className="mb-5 text-sm text-neutral-500">
           Subscribe to get new posts directly in your inbox.
         </p>
         <EmailSubscribe />
@@ -115,9 +116,9 @@ export default function AboutPage() {
       <div>
         <Link
           href="/contact"
-          className="inline-flex items-center gap-2 rounded-lg border border-neutral-700 px-5 py-2.5 text-sm font-medium text-neutral-300 transition-colors hover:border-neutral-500 hover:text-neutral-100"
+          className="text-sm text-neutral-500 underline underline-offset-3 decoration-neutral-700 transition-colors hover:text-neutral-300"
         >
-          Get in touch
+          Get in touch →
         </Link>
       </div>
     </div>

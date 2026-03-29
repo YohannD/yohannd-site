@@ -1,0 +1,47 @@
+---
+title: The Gap Between AI Demos and AI Products
+date: "2026-03-29"
+description: Most AI demos work. Most AI products don't. Here's why — and what it actually takes to cross that gap.
+tags: [Applied AI, Enterprise, Engineering]
+published: true
+---
+
+The demo worked. It always works.
+
+You see the model identify the right entities, generate the correct summary, surface the relevant document. The demo room is impressed. Someone says "this is going to change everything."
+
+Three months later, the team is debugging a data pipeline. Again.
+
+## The demo is not the product
+
+The demo is a controlled experiment. Clean inputs, pre-validated data, a patient audience. Real AI products encounter none of those conditions.
+
+Real products deal with:
+- **Inconsistent data formats** that the model wasn't trained to handle
+- **Edge cases** that account for 20% of volume but 80% of customer complaints
+- **Organizational resistance** from the people whose workflows you're changing
+- **Latency constraints** that make the elegant solution unusable in production
+
+None of this shows up in a demo. All of it shows up in deployment.
+
+## What the hard part actually is
+
+I've worked on enough enterprise AI deployments to know: the model is rarely the problem. The model is solved. The hard part is everything around the model.
+
+Data pipelines that break in subtle ways. Governance frameworks that teams haven't thought through yet. Integration with legacy systems that don't have APIs. Change management for operators who trusted their old process and are now being asked to trust an algorithm.
+
+These are engineering problems. They're also organizational problems. Neither discipline alone can solve them.
+
+## The implication for how you build
+
+If you're evaluating AI vendors or tools, don't ask "does the demo work?" Ask: what does their implementation methodology look like?
+
+A strong AI product team talks about data quality, edge case handling, fallback behavior, and operator adoption. They've built for failure modes. They have a theory of how change management works inside their customers' organizations.
+
+A team that leads with the demo probably hasn't shipped to a hard environment yet.
+
+The gap between demo and product isn't a technology problem. It's a discipline problem.
+
+---
+
+*Working through a Palantir evaluation or an AI deployment that's stuck? [Get in touch →](/contact)*

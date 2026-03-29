@@ -4,29 +4,31 @@
   --font-sans: "Inter", system-ui, -apple-system, sans-serif;
   --font-mono: "JetBrains Mono", "Fira Code", monospace;
 
-  --color-brand-50: #f0f4ff;
-  --color-brand-100: #dde7ff;
-  --color-brand-200: #c3d1ff;
-  --color-brand-300: #9db4ff;
-  --color-brand-400: #728dff;
-  --color-brand-500: #4f63ff;
-  --color-brand-600: #3340f5;
-  --color-brand-700: #2a2fd8;
-  --color-brand-800: #252aae;
-  --color-brand-900: #252b89;
-  --color-brand-950: #161850;
+  /* Electric teal — primary accent */
+  --color-brand-50: #e4fdf9;
+  --color-brand-100: #b8f8ef;
+  --color-brand-200: #7df0e3;
+  --color-brand-300: #3de5d5;
+  --color-brand-400: #0dd4c2;
+  --color-brand-500: #00b8a6;
+  --color-brand-600: #009486;
+  --color-brand-700: #007265;
+  --color-brand-800: #005048;
+  --color-brand-900: #00312d;
+  --color-brand-950: #001a18;
 
-  --color-neutral-50: #f8f8f7;
-  --color-neutral-100: #f0efed;
-  --color-neutral-200: #e2e0db;
-  --color-neutral-300: #cac7bf;
-  --color-neutral-400: #aaa69c;
-  --color-neutral-500: #908b7f;
-  --color-neutral-600: #78736a;
-  --color-neutral-700: #615d56;
-  --color-neutral-800: #514e48;
-  --color-neutral-900: #45423e;
-  --color-neutral-950: #242220;
+  /* Deep navy + off-white neutrals */
+  --color-neutral-50: #f4f1ec;
+  --color-neutral-100: #e8e2da;
+  --color-neutral-200: #d0c9be;
+  --color-neutral-300: #b0a898;
+  --color-neutral-400: #8d8476;
+  --color-neutral-500: #6d6459;
+  --color-neutral-600: #524e46;
+  --color-neutral-700: #363330;
+  --color-neutral-800: #1f2533;
+  --color-neutral-900: #121b28;
+  --color-neutral-950: #0a1220;
 }
 
 html {

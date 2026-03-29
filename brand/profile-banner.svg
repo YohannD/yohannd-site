@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1584 396" width="1584" height="396">
+  <defs>
+    <!-- Deep navy background -->
+    <rect id="bg" width="1584" height="396" fill="#0A1220"/>
+
+    <!-- Subtle grid pattern — data/precision motif -->
+    <pattern id="grid" x="0" y="0" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M 48 0 L 0 0 0 48" fill="none" stroke="#1F2533" stroke-width="1"/>
+    </pattern>
+
+    <!-- Teal accent glow (soft, no harsh glow) -->
+    <filter id="tealGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1584" height="396" fill="#0A1220"/>
+
+  <!-- Grid overlay (very subtle) -->
+  <rect width="1584" height="396" fill="url(#grid)" opacity="0.4"/>
+
+  <!-- Left teal accent bar -->
+  <rect x="80" y="128" width="3" height="140" fill="#0DD4C2" rx="1.5"/>
+
+  <!-- Name — primary wordmark -->
+  <text
+    x="108"
+    y="196"
+    font-family="Inter, system-ui, -apple-system, sans-serif"
+    font-size="56"
+    font-weight="600"
+    letter-spacing="-1.5"
+    fill="#F4F1EC"
+  >Yohann Doillon</text>
+
+  <!-- Title line -->
+  <text
+    x="110"
+    y="240"
+    font-family="Inter, system-ui, -apple-system, sans-serif"
+    font-size="20"
+    font-weight="400"
+    letter-spacing="0"
+    fill="#8D8476"
+  >CCO · 10x Partners · Official Palantir Partner</text>
+
+  <!-- Teal tagline separator dot -->
+  <circle cx="108" cy="275" r="3" fill="#0DD4C2"/>
+
+  <!-- Tagline -->
+  <text
+    x="122"
+    y="280"
+    font-family="Inter, system-ui, -apple-system, sans-serif"
+    font-size="15"
+    font-weight="400"
+    letter-spacing="0.02em"
+    fill="#6D6459"
+  >Enterprise AI that actually delivers.</text>
+
+  <!-- Right side — minimal geometric mark (2×2 grid of squares) -->
+  <!-- Represents data structure / Palantir ontology grid motif -->
+  <g transform="translate(1400, 148)" opacity="0.7">
+    <!-- Top row -->
+    <rect x="0"  y="0"  width="28" height="28" rx="4" fill="none" stroke="#0DD4C2" stroke-width="1.5"/>
+    <rect x="36" y="0"  width="28" height="28" rx="4" fill="#0DD4C2" opacity="0.15"/>
+    <rect x="36" y="0"  width="28" height="28" rx="4" fill="none" stroke="#0DD4C2" stroke-width="1.5"/>
+    <!-- Bottom row -->
+    <rect x="0"  y="36" width="28" height="28" rx="4" fill="#0DD4C2" opacity="0.08"/>
+    <rect x="0"  y="36" width="28" height="28" rx="4" fill="none" stroke="#007265" stroke-width="1.5"/>
+    <rect x="36" y="36" width="28" height="28" rx="4" fill="none" stroke="#363330" stroke-width="1.5"/>
+    <!-- Inner teal dot — top-left active cell -->
+    <rect x="8"  y="8"  width="12" height="12" rx="2" fill="#0DD4C2"/>
+  </g>
+
+  <!-- Subtle bottom border line in teal -->
+  <line x1="80" y1="392" x2="400" y2="392" stroke="#0DD4C2" stroke-width="1" opacity="0.3"/>
+</svg>
